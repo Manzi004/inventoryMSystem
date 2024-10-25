@@ -1,11 +1,10 @@
 package com.manzicoding2024.inventoryms_springboot_api.models;
 
 //import com.kindson.inventoryappspringbootapi.security.Auditable;
-import com.manzicoding2024.inventoryms_springboot_api.security.Auditable;
+import com.manzicoding2024.inventoryms_springboot_api.security.models.Auditable;
 import lombok.Data;
 
 import jakarta.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "transaction")

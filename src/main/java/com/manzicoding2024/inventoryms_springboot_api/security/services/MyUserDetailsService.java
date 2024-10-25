@@ -1,8 +1,9 @@
-package com.manzicoding2024.inventoryms_springboot_api.security;
+package com.manzicoding2024.inventoryms_springboot_api.security.services;
 
 
 import com.manzicoding2024.inventoryms_springboot_api.models.User;
 import com.manzicoding2024.inventoryms_springboot_api.repositories.UserRepository;
+import com.manzicoding2024.inventoryms_springboot_api.security.models.UserPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,4 +1,4 @@
-package com.manzicoding2024.inventoryms_springboot_api.security;
+package com.manzicoding2024.inventoryms_springboot_api.security.services;
 
 
 import com.manzicoding2024.inventoryms_springboot_api.models.User;

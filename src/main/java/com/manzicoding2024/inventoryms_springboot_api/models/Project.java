@@ -2,13 +2,12 @@ package com.manzicoding2024.inventoryms_springboot_api.models;
 
 import com.fasterxml.jackson.annotation.*;
 //import com.kindson.inventoryappspringbootapi.security.Auditable;
-import com.manzicoding2024.inventoryms_springboot_api.security.Auditable;
+import com.manzicoding2024.inventoryms_springboot_api.security.models.Auditable;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import java.util.List;
 
 @Getter
 @Setter

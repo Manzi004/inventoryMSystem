@@ -1,5 +1,6 @@
-package com.manzicoding2024.inventoryms_springboot_api.security;
+package com.manzicoding2024.inventoryms_springboot_api.security.repositories;
 
+import com.manzicoding2024.inventoryms_springboot_api.security.models.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

@@ -1,7 +1,5 @@
 package com.manzicoding2024.inventoryms_springboot_api.services;
 
-//import com.kindson.inventoryappspringbootapi.models.SubCategory;
-//import com.kindson.inventoryappspringbootapi.repositories.SubCategoryRepository;
 import com.manzicoding2024.inventoryms_springboot_api.models.SubCategory;
 import com.manzicoding2024.inventoryms_springboot_api.repositories.SubCategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;

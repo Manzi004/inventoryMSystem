@@ -2,6 +2,8 @@ package com.manzicoding2024.inventoryms_springboot_api.security;
 
 
 import com.manzicoding2024.inventoryms_springboot_api.repositories.UserRepository;
+import com.manzicoding2024.inventoryms_springboot_api.security.models.Role;
+import com.manzicoding2024.inventoryms_springboot_api.security.repositories.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

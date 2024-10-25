@@ -1,4 +1,4 @@
-package com.manzicoding2024.inventoryms_springboot_api.security;
+package com.manzicoding2024.inventoryms_springboot_api.security.models;
 
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;

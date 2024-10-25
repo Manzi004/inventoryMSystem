@@ -1,7 +1,8 @@
-package com.manzicoding2024.inventoryms_springboot_api.security;
+package com.manzicoding2024.inventoryms_springboot_api.security.controllers;
 
 
 import com.manzicoding2024.inventoryms_springboot_api.models.User;
+import com.manzicoding2024.inventoryms_springboot_api.security.services.AuthenticationService;
 import com.manzicoding2024.inventoryms_springboot_api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

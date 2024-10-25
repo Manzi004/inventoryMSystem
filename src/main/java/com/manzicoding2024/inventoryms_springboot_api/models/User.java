@@ -1,11 +1,10 @@
 package com.manzicoding2024.inventoryms_springboot_api.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 //import com.kindson.inventoryappspringbootapi.security.Auditable;
 //import com.kindson.inventoryappspringbootapi.security.Role;
-import com.manzicoding2024.inventoryms_springboot_api.security.Auditable;
-import com.manzicoding2024.inventoryms_springboot_api.security.Role;
+import com.manzicoding2024.inventoryms_springboot_api.security.models.Auditable;
+import com.manzicoding2024.inventoryms_springboot_api.security.models.UserPrivilegeAssignment;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -69,13 +68,22 @@ public class User extends Auditable<String> {
     private String profile;
 
 
-    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_role",
-            joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_id")}
-    )
-    List<Role> roles;
+//    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+//    @JoinTable(
+//            name = "user_role",
+//            joinColumns = {@JoinColumn(name = "user_id")},
+//            inverseJoinColumns = {@JoinColumn(name = "role_id")}
+//    )
+//    List<Role> roles;
+
+    /*
+        Here we're establishing a mapping between 2 tables: User and UserPrivilegeAssignment
+        we use a proper annotation and we specify a field, here we use "user" field
+        this will return a list of privileges for the user
+     */
+    @OneToMany(mappedBy = "user")
+    private List<UserPrivilegeAssignment> privileges;
+
 
     @ElementCollection
     @CollectionTable(name = "social_links", joinColumns = @JoinColumn(name = "user_id"))

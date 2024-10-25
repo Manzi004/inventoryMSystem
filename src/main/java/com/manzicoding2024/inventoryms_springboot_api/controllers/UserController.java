@@ -2,7 +2,7 @@ package com.manzicoding2024.inventoryms_springboot_api.controllers;
 
 
 import com.manzicoding2024.inventoryms_springboot_api.models.User;
-import com.manzicoding2024.inventoryms_springboot_api.security.Role;
+import com.manzicoding2024.inventoryms_springboot_api.security.models.Role;
 import com.manzicoding2024.inventoryms_springboot_api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
 @RestController
 public class UserController {
@@ -57,7 +56,7 @@ public class UserController {
     @PutMapping("/user/{id}/roles")
     public User updateUser(@RequestBody() List<Role> roles, @PathVariable("id") Long id){
         User user = userService.getUserById(id);
-        user.setRoles(roles);
+        //user.setRoles(roles);
         return userService.updateUser(user, id);
     }
 }
